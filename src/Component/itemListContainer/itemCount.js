@@ -19,11 +19,10 @@ const Boton = ({ Stock, initial, onAdd }) => {
     return (
         <div>
             <h3>{acumulador}</h3>
-            <h3> servicio </h3>
             <div>
                 <button disabled={acumulador <= 0} onClick={restaProducto} >
                     -</button>
-                <span> <button disabled={acumulador > stock} onClick={() => { onAdd(acumulador) }}>agregar al carrito</button> </span>
+                <span> <button disabled={acumulador > stock} onClick={() => { onAdd(acumulador) }}>Agregar al carrito</button> </span>
                 <button disabled={acumulador >= stock} onClick={sumaProducto}>
                     +</button>
 
