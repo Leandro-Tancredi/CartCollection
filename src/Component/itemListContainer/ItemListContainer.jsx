@@ -1,5 +1,6 @@
 import React from "react";
-import ItemList from "./Itemlist";
+//import ItemList from "./Itemlist";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const ItemListContainer = ({ greeting }) => {
    
@@ -7,8 +8,8 @@ const ItemListContainer = ({ greeting }) => {
         <h1 style={{ color: "blue" }}>
             {greeting}
         </h1>
-        <ItemList />
-     
+        {/*<ItemList />*/}
+     <ItemDetailContainer />
         
     </div>
     )
