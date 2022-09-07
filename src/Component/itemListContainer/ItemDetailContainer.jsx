@@ -8,24 +8,22 @@ const ItemDetailContainer = () => {
     const [Producto, setProducto] = useState(0);
 
     const getItem = async () => {
-        try {
-            const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=tarot/0`)
-            const data = await response.json();
-            setProducto(data.results[10])
+
+        const response = await fetch("./datos.json")
+        const data = await response.json();
+        setProducto(data)
 
 
-        } catch (e) {
-            console.log(`error ${e}`);
-        }
+
     }
-
     useEffect(() => {
 
-        setTimeout(() => { getItem() }, 2000)
+        setTimeout(() => { getItem() }, 1000)
 
     }
 
         , []);
+
     const onAdd = (valor) => {
         console.log(`usted compró ${valor} unidades`)
     }
@@ -35,17 +33,22 @@ const ItemDetailContainer = () => {
     }
 
     return (
-        <>
-            <div>
+        <> 
+            <div className="container">
                 <div className="row">
-                    <div className="col-md-3">
-                        <div >
-                            <ItemDetail Producto={Producto} />
-                            <Boton Stock={5} initial={0} onAdd={onAdd} />
-                        </div>
-                    </div>
+
+                    {Producto.map((Producto, index) => {
+                        return (
+                            <div className="col-md-3" key={index}>
+                                <ItemDetail Producto={Producto} />
+                                <Boton Stock={5} initial={0} onAdd={onAdd} />
+                            </div>
+                                )
+                            })
+                    }
                 </div>
             </div>
+
         </>
     )
 }
