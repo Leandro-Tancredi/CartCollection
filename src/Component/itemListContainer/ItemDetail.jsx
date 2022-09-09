@@ -4,10 +4,10 @@ import Item from "./Item";
 
 
 
-const ItemDetail = ({Producto}) => {
+const ItemDetail = ({producto}) => {
     
    return(
-  <Item producto={Producto}/>
+  <Item producto={producto}/>
    )
 };
 export default ItemDetail
