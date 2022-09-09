@@ -1,6 +1,6 @@
  [
     { "id" : 1 , "src": "./images/lecturaAnual.jpeg", "title":"Lectura Anual", "price":"$ 3.000" },
-    { "id" : 2 , "src": "./images/lecturaAquiYAhora.jpeg", "title":"Lectura Aquí y Ahora", "price":"$ 2.500" },
+    { "id" : 2 , "src": "./images/lecturaAquiYAhora.jpg", "title":"Lectura Aquí y Ahora", "price":"$ 2.500" },
     { "id" : 3 , "src": "./images/LecturaAstrologica.jpeg", "title":"Lectura Astrológica", "price": "$ 3.000" },
     { "id" : 4 , "src": "./images/lecturaDeAmorPropio.jpeg", "title":"Lectura De Amor Propio", "price": "$1.999" },
     { "id" : 5 , "src": "./images/LecturaDeLaRupturaAnual.jpeg", "title":"Lectura De La Ruptura Sentimental", "price": "$ 2.500" },
