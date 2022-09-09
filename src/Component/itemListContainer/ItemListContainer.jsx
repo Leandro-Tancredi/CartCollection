@@ -1,15 +1,15 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 //import ItemList from "./Itemlist";
 import ItemDetailContainer from "./ItemDetailContainer";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
+   const {idProducto} = useParams() 
    
-    return (<div>
-        <h1 style={{ color: "blue" }}>
-            {greeting}
-        </h1>
-        {/*<ItemList />*/}
-     <ItemDetailContainer />
+    return (
+    <div>
+       {/*<ItemList />*/}
+     <ItemDetailContainer idProducto={idProducto} />
         
     </div>
     )

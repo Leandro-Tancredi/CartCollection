@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+.tamañoFoto     
+{
+  width: 50%;
+}
+.colorNav{
+  background-color: rgb(247, 218, 247);
+ 
+}
+.fuente{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.posicionNav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:center; 
+}
+.tamañoTarjeta{
+
+  height: 46px!important;
+}

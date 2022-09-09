@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from "react";
 import Boton from "./itemCount";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({idProducto}) => {
 
     const [Producto, setProducto] = useState(0);
 
@@ -29,12 +29,12 @@ const ItemDetailContainer = () => {
 
     return (
         <> 
-            <div className="container">
-                <div className="row">
-                    {Producto.map((Producto, index) => {
+            <div className="container mt-5">
+                <div className="row fuente">
+                    {Producto.map((producto, index) => {
                         return (
-                                <div className="col-md-3" key={index}>
-                                    <ItemDetail Producto={Producto} />
+                                <div className="col-md-3 " key={index}>
+                                    <ItemDetail producto={producto} idProducto={producto.id} />
                                     <Boton Stock={5} initial={0} onAdd={onAdd} />
                                 </div>
                                 )

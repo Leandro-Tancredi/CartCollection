@@ -1,16 +1,23 @@
 import './App.css';
 import NavBar from './Component/Navbar/Navbar.jsx';
 import React from 'react';
-//import ItemListContainer from './Component/itemListContainer/ItemListContainer.jsx';
+import ItemListContainer from './Component/itemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './Component/itemListContainer/ItemDetailContainer';
-
+import {BrowserRouter, Routes,Route  } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      
+      <BrowserRouter>
       <NavBar />
-      {/*<ItemListContainer greeting='Hola bienvenidos a Cósmica Intuición' />*/}
-      <ItemDetailContainer />
+      <Routes>
+        <Route path='/home' element= {<ItemListContainer />}/>
+        <Route path='/producto/:idProducto' element= {<ItemListContainer />}/>
+        <Route path='/producto/categoria/:idProducto' element= {<ItemDetailContainer />}/>
+      </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
