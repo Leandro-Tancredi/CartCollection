@@ -1,14 +1,14 @@
- [
-    { "id" : 1 , "src": "./images/lecturaAnual.jpeg", "title":"Lectura Anual", "price":"$ 3.000" },
-    { "id" : 2 , "src": "./images/lecturaAquiYAhora.jpg", "title":"Lectura Aquí y Ahora", "price":"$ 2.500" },
-    { "id" : 3 , "src": "./images/LecturaAstrologica.jpeg", "title":"Lectura Astrológica", "price": "$ 3.000" },
-    { "id" : 4 , "src": "./images/lecturaDeAmorPropio.jpeg", "title":"Lectura De Amor Propio", "price": "$1.999" },
-    { "id" : 5 , "src": "./images/LecturaDeLaRupturaAnual.jpg", "title":"Lectura De La Ruptura Sentimental", "price": "$ 2.500" },
-    { "id" : 6 , "src": "./images/LecturaDeLasDesiciones.jpeg", "title":"Lectura De Las Desiciones", "price": "$ 1.999" },
-    { "id" : 7 , "src": "./images/LecturaDelMes.jpeg", "title":"Lectura Del Mes", "price": "$ 1.800" },
-    { "id" : 8 , "src": "./images/LecturaDeVinculosCompleta.jpeg", "title":"Lectura De Vinculos Completa", "price": "$ 2.500" },
-    { "id" : 9 , "src": "./images/lecturaGeneralCompleta.jpeg", "title":"Lectura General Completa", "price": "$ 2.800" },
-    { "id" : 10 , "src": "./images/lecturaGeneralCompletaPorVideoLlamada.jpeg", "title":"Lectura General Completa Por Video Llamada", "price": "$ 4.500" },
-    { "id" : 11 , "src": "./images/sesion3MesesTarot.jpeg", "title":"Sesión 3 Meses de Tarot", "price": "$ 4.800" },
-    { "id" : 12 , "src": "./images/SesionOnlineFloresDeBach-incluyeGotero.jpeg", "title":"Sesión Online Flores De Bach (incluye gotero)", "price": "$ 2.000" }
+[
+    { "id" : 0 , "src": ".././images/lecturaAnual.jpeg", "title":"Lectura Anual", "price":"$ 3.000" },
+    { "id" : 1, "src": ".././images/lecturaAquiYAhora.jpg", "title":"Lectura Aquí y Ahora", "price":"$ 2.500" },
+    { "id" : 2, "src": ".././images/LecturaAstrologica.jpeg", "title":"Lectura Astrológica", "price": "$ 3.000" },
+    { "id" : 3, "src": ".././images/lecturaDeAmorPropio.jpeg", "title":"Lectura De Amor Propio", "price": "$1.999" },
+    { "id" : 4, "src": ".././images/LecturaDeLaRupturaAnual.jpg", "title":"Lectura De La Ruptura Sentimental", "price": "$ 2.500" },
+    { "id" : 5, "src": ".././images/LecturaDeLasDesiciones.jpeg", "title":"Lectura De Las Desiciones", "price": "$ 1.999" },
+    { "id" : 6, "src": ".././images/LecturaDelMes.jpeg", "title":"Lectura Del Mes", "price": "$ 1.800" },
+    { "id" : 7, "src": ".././images/LecturaDeVinculosCompleta.jpeg", "title":"Lectura De Vinculos Completa", "price": "$ 2.500" },
+    { "id" : 8, "src": ".././images/lecturaGeneralCompleta.jpeg", "title":"Lectura General Completa", "price": "$ 2.800" },
+    { "id" : 9, "src": ".././images/lecturaGeneralCompletaPorVideoLlamada.jpeg", "title":"Lectura General Completa Por Video Llamada", "price": "$ 4.500" },
+    { "id" : 10, "src": ".././images/sesion3MesesTarot.jpeg", "title":"Sesión 3 Meses de Tarot", "price": "$ 4.800" },
+    { "id" : 11, "src": ".././images/SesionOnlineFloresDeBach-incluyeGotero.jpeg", "title":"Sesión Online Flores De Bach (incluye gotero)", "price": "$ 2.000" }
 ]

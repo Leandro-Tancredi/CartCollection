@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Item = ({ producto }) => {
+const Item = ({ producto}) => {
 
 
 

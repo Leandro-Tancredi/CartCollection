@@ -2,43 +2,39 @@ import React from "react";
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from "react";
 import Boton from "./itemCount";
+import { useParams } from "react-router-dom";
+
 
 const ItemDetailContainer = () => {
+
+    const { id } = useParams()
 
     const [Producto, setProducto] = useState(0);
 
     const getItem = async () => {
-
-        const response = await fetch("./datos.json")
+        const response = await fetch("/datos.json")
         const data = await response.json();
-        setProducto(data)
-    
+        setProducto(data[id])
     }
+
     useEffect(() => {
 
-        setTimeout(() => { getItem() }, 1000)
+        getItem();
 
-    }, []);
+    }, [])
+
     const onAdd = (valor) => {
         console.log(`usted compró ${valor} unidades`)
     }
 
-    if (Producto === 0) {
-        return (<h1>Loading...</h1>)
-    }
-
     return (
-        <> 
+        <>
             <div className="container mt-5">
-                <div className="row fuente">
-                    {Producto.map((producto, index) => {
-                        return (
-                                <div className="col-md-3 " key={index}>
-                                    <ItemDetail producto={producto} />
-                                    <Boton Stock={5} initial={0} onAdd={onAdd} />
-                                </div>
-                                )
-                    })}
+                <div className="row fuente justify-content-center">
+                    <div className="col-md-3 "  >
+                        <ItemDetail producto={Producto} />
+                        <Boton Stock={5} initial={0} onAdd={onAdd} />
+                    </div>
                 </div>
             </div>
         </>
@@ -46,3 +42,13 @@ const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer;
+
+
+
+
+
+
+
+
+
+

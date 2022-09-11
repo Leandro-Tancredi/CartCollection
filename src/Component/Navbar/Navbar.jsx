@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
+
 const NavBar = () => {
+  
   return (
     <div>
       <div className="colorNav">
       <div className="row">
-        <a className="navbar-brand fuente" href="#">Cosmica Intuicion</a>
-      </div>
+       <a className="navbar-brand fuente" >Cosmica Intuicion</a>
+       </div>
       <div className="container-fluid">
       <div className="row ml-3">
         <div className="col-md-7"></div>
@@ -26,7 +29,8 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-        </nav></div>
+        </nav>
+        </div>
       </div>
       </div>
       </div>
@@ -39,7 +43,7 @@ const NavBar = () => {
             </form>
           </div>
           <div className="col-md-4">
-            <img className="tamañoFoto" src="./images/fotoFlor.jpeg " alt="foto" />
+            <img className="tamañoFoto" src=".././images/fotoFlor.jpeg " alt="foto" />
           </div>
 
           <div className="col-md-4 pt-5">
@@ -65,12 +69,18 @@ const NavBar = () => {
                 </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav  mb-2 mb-lg-0 ">
-                <a className="nav-link" href="#">inicio</a>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">Preguntas Frecuentes</a>
+              <Link to={`/`}>
+              <a className="nav-link" href="#">inicio</a>
+               </Link>
+               <li className="nav-item">
+                  <Link to={`/category/PreguntasFrecuentes`}>
+                  <a className="nav-link">Preguntas Frecuentes</a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Acerca de mi</a>
+                <Link to={`/category/Acerca-de-mi`}>
+                  <a className="nav-link">Acerca de mi</a>
+                  </Link>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">Como Comprar</a>
