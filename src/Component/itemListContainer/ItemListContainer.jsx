@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Item from "./Item.jsx";
-import Boton from "./itemCount.js";
 import { Link } from "react-router-dom";
 
 const ItemListContainer = () => {
@@ -23,10 +22,6 @@ const ItemListContainer = () => {
         buscarProductos()
     }, []);
     
-    const onAdd = (valor) => {
-        console.log(`usted compró ${valor} unidades`);
-    }
-    
 return (
         <>
             <div className="container mt-5">  
@@ -36,7 +31,6 @@ return (
                         <div className="col-md-3 " key={index}>
                         <Link to={`Item/${index}`}>
                             <Item producto={productos} />
-                            <Boton Stock={5} initial={0} onAdd={onAdd} />
                         </Link>
                         </div>
                         )})}
@@ -45,8 +39,9 @@ return (
         </>
         )
 };
-
+                           
 export default ItemListContainer;
+
                         
 
                         

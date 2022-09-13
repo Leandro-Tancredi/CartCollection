@@ -1,7 +1,6 @@
 import React from "react";
 import ItemDetail from "./ItemDetail";
 import { useEffect, useState } from "react";
-import Boton from "./itemCount";
 import { useParams } from "react-router-dom";
 
 
@@ -23,17 +22,13 @@ const ItemDetailContainer = () => {
 
     }, [])
 
-    const onAdd = (valor) => {
-        console.log(`usted compró ${valor} unidades`)
-    }
-
     return (
         <>
             <div className="container mt-5">
                 <div className="row fuente justify-content-center">
                     <div className="col-md-3 "  >
                         <ItemDetail producto={Producto} />
-                        <Boton Stock={5} initial={0} onAdd={onAdd} />
+                        
                     </div>
                 </div>
             </div>
