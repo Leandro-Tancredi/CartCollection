@@ -1,12 +1,20 @@
-import React from "react";
+import React,{useContext} from "react";
 import Item from "./Item";
 import Boton from "./itemCount";
+import { Context } from "../Context/CartContext"; 
+
 
 const ItemDetail = ({producto}) => {
      
+      const {addItem} =useContext(Context);
+
       const onAdd = (acumulador) => {
-            console.log(`usted compró ${acumulador} unidades`)
-        }
+            
+           addItem(producto,acumulador);
+        
+      }
+            
+
       return(   
             <>         
                   <Item producto={producto} /> 

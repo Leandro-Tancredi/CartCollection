@@ -24,12 +24,13 @@ const Boton = ({ Stock, initial, onAdd }) => {
             <div>
                 <button disabled={acumulador <= 0} onClick={restaProducto} >
                     -</button>
-               <Link to={`/cart`}>
+               
                 <span> <button disabled={acumulador > stock} onClick={() => { onAdd(acumulador) }}>Agregar al carrito</button> </span>
-                </Link>
+                
                  <button disabled={acumulador >= stock} onClick={sumaProducto}>
                     +</button>
-
+                   <Link to="/"> <button> seguir comprando
+                    </button></Link>
             </div>
         </div>
     );

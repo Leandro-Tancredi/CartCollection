@@ -89,7 +89,7 @@ const NavBar = () => {
                   <a className="nav-link" href="#">Contacto</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#"><CartWidget /></a></li>
+                  <a className="nav-link" ><Link to={`/cart`}><CartWidget /></Link></a></li>
               </ul>
             </div>
               
