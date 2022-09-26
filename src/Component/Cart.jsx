@@ -8,7 +8,7 @@ const Cart=()=>{
     const [precioTotal,setPrecioTotal]=useState(0);
     
     useEffect(()=>{
-setPrecioTotal(Total());
+        setPrecioTotal(Total());
     },[Carrito]);
     
    
@@ -18,9 +18,11 @@ setPrecioTotal(Total());
             {Carrito.map((element=><CartItem item={element}/>))}
             <h3>{precioTotal}</h3>
             <button onClick={clear}>Vaciar Carrito</button>
-            
-        </>):(
+        </>)
+        :(
         <h3>El Carrito se encuentra vacío</h3>
             )}
-        </>)}
+        </>
+        )
+    };
 export default Cart;

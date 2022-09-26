@@ -7,7 +7,6 @@ const CartItem = ({item}) => {
     return (  
     <>        
         <h1>{item.title}-{item.quantity}</h1>
-        
         <button onClick={()=>removeItem(item.id)}>Borrar Producto</button>
 
     </>
