@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Item from "./Item.jsx";
 import { Link } from "react-router-dom";
-
+import {getFirestore, collection, getDocs} from "firebase/firestore"
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
 
-    const buscarProductos = async () => {
+   /* const buscarProductos = async () => {
         try {
             const response = await fetch(`/datos.json`)
             const data = await response.json();
@@ -16,11 +16,20 @@ const ItemListContainer = () => {
         } catch (e) {
             console.log(`error ${e}`);
         }
-    }
+    }*/
 
     useEffect(() => {
-        buscarProductos()
-    }, []);
+        const db= getFirestore();
+        const items= collection(db,"items");
+        getDocs(items).then((snapshot)=>{
+           const docs= snapshot.docs.map((doc)=>({
+            id: doc.id,
+            ...doc.data()
+           }))
+           setProductos(docs);
+
+       // buscarProductos()
+    }, [])});
     
 return (
         <>

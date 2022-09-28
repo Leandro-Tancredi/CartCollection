@@ -1,7 +1,7 @@
 import React, {useContext, useState, useEffect} from "react";
 import { Context } from "./Context/CartContext";
 import CartItem from "./Navbar/CartItem";
-
+import { Link } from "react-router-dom";
 
 const Cart=()=>{
     const {Carrito, clear, Total}=useContext(Context)
@@ -20,8 +20,9 @@ const Cart=()=>{
             <button onClick={clear}>Vaciar Carrito</button>
         </>)
         :(
+            <Link to={`/`}>
         <h3>El Carrito se encuentra vacío</h3>
-            )}
+        </Link> )}
         </>
         )
     };
