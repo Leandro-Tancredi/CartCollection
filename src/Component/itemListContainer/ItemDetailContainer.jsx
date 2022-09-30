@@ -1,6 +1,6 @@
 import React from "react";
 import ItemDetail from "./ItemDetail";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import {getFirestore, collection, getDocs} from "firebase/firestore"
 
 const ItemDetailContainer = () => {
@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
         })
         //getItem();
 
-    }, [])
+    },[])
 
     return (
         <>
@@ -33,7 +33,6 @@ const ItemDetailContainer = () => {
                 <div className="row fuente justify-content-center">
                     <div className="col-md-3 "  >
                         <ItemDetail producto={Producto} />
-                        
                     </div>
                 </div>
             </div>

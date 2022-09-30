@@ -1,12 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-
-const Item = ({ producto}) => {
+const Item = ({producto}) => {
 
 
 
     return (
-
+    <Link to={`Item/${producto.id}`}>
         <div className="card" >
             <img src={producto.img} className="card-img-top" alt="..." />
             <div className="card-body">
@@ -14,7 +14,7 @@ const Item = ({ producto}) => {
                 <p className="card-text">${producto.price}</p>
             </div>
         </div>
-
+    </Link>
     )
 }
 export default Item;

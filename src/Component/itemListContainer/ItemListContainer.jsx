@@ -27,9 +27,9 @@ const ItemListContainer = () => {
             ...doc.data()
            }))
            setProductos(docs);
-
+})
        // buscarProductos()
-    }, [])});
+    },[]);
     
 return (
         <>
