@@ -15,7 +15,7 @@ const Cart=()=>{
     return(
         <>
         {Carrito.length > 0 ? (<>
-            {Carrito.map((element=><CartItem item={element}/>))}
+            {Carrito.map((element,index)=><CartItem item={element} key={index} />)}
             <h3>{precioTotal}</h3>
             <button onClick={clear}>Vaciar Carrito</button>
         </>)
