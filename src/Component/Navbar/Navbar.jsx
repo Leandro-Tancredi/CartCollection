@@ -19,13 +19,13 @@ const NavBar = () => {
           <div className="collapse navbar-collapse " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
             <li className="nav-item">
-            <a className="navbar-brand fuente " href="#">Telefono</a>
+            <a className="navbar-brand fuente ">Telefono</a>
             </li>
             <li className="nav-item">
-              <a className="navbar-brand fuente " href="#">@   cosmicaintuicion@gmail.com</a>
+              <a className="navbar-brand fuente ">@   cosmicaintuicion@gmail.com</a>
               </li>
               <li className="nav-item">
-              <a className="navbar-brand fuente" href="#">ubicacion map</a>
+              <a className="navbar-brand fuente">ubicacion map</a>
               </li>
             </ul>
           </div>
@@ -51,7 +51,7 @@ const NavBar = () => {
               <div className="container-fluid">
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav pl-5 mb-2 mb-lg-0">
-                <a className="nav-link" href="#">Crear Cuenta</a>
+                <a className="nav-link">Crear Cuenta</a>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#"> | Iniciar sesión</a>
                 </li>
@@ -70,7 +70,7 @@ const NavBar = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav  mb-2 mb-lg-0 ">
               <Link to={`/`}>
-              <a className="nav-link" href="#">inicio</a>
+              <a className="nav-link">inicio</a>
                </Link>
                <li className="nav-item">
                   <Link to={`/category/PreguntasFrecuentes`}>
@@ -83,10 +83,10 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Como Comprar</a>
+                  <a className="nav-link">Como Comprar</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">Contacto</a>
+                  <a className="nav-link">Contacto</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" ><Link to={`/cart`}><CartWidget /></Link></a></li>

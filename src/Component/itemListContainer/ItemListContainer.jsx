@@ -7,17 +7,6 @@ const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
 
-   /* const buscarProductos = async () => {
-        try {
-            const response = await fetch(`/datos.json`)
-            const data = await response.json();
-            setProductos(data);
-
-        } catch (e) {
-            console.log(`error ${e}`);
-        }
-    }*/
-
     useEffect(() => {
         const db= getFirestore();
         const items= collection(db,"items");
@@ -27,11 +16,8 @@ const ItemListContainer = () => {
             ...doc.data()
            }))
            setProductos(docs);
-})
-       // buscarProductos()
-    },[]);
-    
-return (
+})},[]);
+    return (
         <>
             <div className="container mt-5">  
                 <div className="row ">
