@@ -2,9 +2,10 @@ import { addDoc, getFirestore, collection } from "firebase/firestore";
 import React, { useContext, useState } from "react";
 import { Context } from "../Context/CartContext";
 
+
 const CartItem = ({ item }) => {
     const { removeItem } = useContext(Context)
-    
+    const [orderId, setOrderId] =useState("")
     const [form, setForm] = useState({
         name: "",
         email: "",
@@ -31,14 +32,15 @@ const CartItem = ({ item }) => {
         const contactFormCollection = collection(db, "contactForm");
         addDoc(contactFormCollection, form).then((snapshot) => console.log(snapshot.id))
         const orderCollection = collection(db, "order");
-        addDoc(orderCollection, order).then((snapshot) => console.log(snapshot.id))
+        addDoc(orderCollection, order).then((snapshot) => {setOrderId(snapshot.id)})
     }
  
   
 
-    return (
+    return (<>
+        {orderId==="" ? (
         <>
-            <h1>{item.title}-{item.quantity}</h1>
+            <h1>{item.title}-{item.quantity}</h1> 
             <button onClick={() => removeItem(item.id)}>Borrar Producto</button>
             <form onSubmit={submitHandler}>
                 <div className="row justify-content-center">
@@ -72,7 +74,9 @@ const CartItem = ({ item }) => {
                 </div>
             </form>
         </>
-    );
-}
-
+    ):( 
+    <h2>tu compra es la numero {orderId}</h2>
+    )}
+</>)
+    }
 export default CartItem;
